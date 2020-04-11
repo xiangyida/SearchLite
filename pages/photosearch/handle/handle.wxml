@@ -1,0 +1,11 @@
+
+<!-- 引入组件 -->
+<import src="../welCropper/welCropper.wxml" />
+
+<!-- 调用组件 -->
+<!-- <template is="welCropper" data="{{data:cropperData, cropperMovableItems:cropperMovableItems}}"></template> -->
+ <template is="welCropper" data="{{cropperData:cropperData, cropperMovableItems:cropperMovableItems, cropperChangableData:cropperChangableData}}"></template> 
+
+<loading hidden="{{hidden}}" bindchange="loadingChange" style="z-index:99;">
+    努力上传中
+</loading>

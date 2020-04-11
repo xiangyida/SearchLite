@@ -1,0 +1,27 @@
+
+  <!--相机  -->
+  <camera device-position="back" flash="off" binderror="error" style="width: 100%; height:100%; ">
+ 
+  <!--拍照按钮  -->
+  <cover-view style='width:160rpx;height:160rpx;position:absolute; right:295rpx; bottom:20rpx;'>
+  <cover-image src='/images/photo.png' style='width:160rpx;height:160rpx;' bindtap='takePhoto'/> 
+   </cover-view>
+  <!--从相册选择   -->
+  <cover-view class="album" style='width:100rpx;height:100rpx;border-radius: 100rpx;position:absolute; left:70rpx; bottom:50rpx; background-color: 	#2F4F4F;opacity: 0.6;text-align:center;' >
+  
+  </cover-view>
+  <cover-view style='position:absolute; left:90rpx; bottom:75rpx;margin-top:40px; color:#FFFFFF;' bindtap='chooseImage' > 相册</cover-view>
+
+  <!--网格线  -->
+  <cover-view class="divLines" style='width:750rpx;height:3rpx;position:absolute;  bottom:33%; background-color:#000000;opacity: 0.6;' />
+  <cover-view class="divLines" style='width:750rpx;height:3rpx;position:absolute;  bottom:67%; background-color:#000000;opacity: 0.6;' />
+  <cover-view class="divLines" style='width:3rpx;height:{{height}}px;position:absolute; bottom:0px; left:67%; background-color:#000000;opacity: 0.6;' />
+   <cover-view class="divLines" style='width:3rpx;height:{{height}}px;position:absolute; bottom:0px; left:33%; background-color:#000000;opacity: 0.6;' />
+
+
+  <!--提示  -->
+  <cover-view class="tip" style='width:200rpx;height:50rpx;border-radius: 20rpx;position:absolute; left:275rpx; top:20rpx; background-color: 	#2F4F4F;opacity: 0.6;text-align:center;color:#FFFFFF;' >
+  保持竖直拍摄
+  </cover-view>
+
+</camera>

@@ -7,7 +7,7 @@ Page({
   },
   navToPhotoSearch:function(){
     wx.navigateTo({
-      url: '/pages/photosearch/photosearch',
+      url: '/pages/photosearch/index/index',
     })
   },
   /**

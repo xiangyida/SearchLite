@@ -9,12 +9,12 @@
       <text class="userinfo-nickname">
         说明：<br/>
         小程序需要获取拍照权限<br/>
-        请使用横屏拍照<br/>
+        请保持竖直拍照<br/>
         拍照完选区上传即可
       </text>
   </view>
   <view class="button">
-        <van-button type="primary" size="large">拍  照</van-button>
+        <van-button type="primary" size="large" bind:click="navToTakephoto">拍  照</van-button>
   </view>
 
 

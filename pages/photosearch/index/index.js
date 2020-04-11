@@ -1,5 +1,10 @@
 // pages/photosearch/photosearch.js
 Page({
+  navToTakephoto:function(){
+    wx.navigateTo({
+      url: '../takephoto/takephoto'
+    })
+  },
 
   /**
    * 页面的初始数据

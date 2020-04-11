@@ -4,10 +4,12 @@
     "pages/index/index",
     "pages/textsearch/textsearch",
     "pages/logs/logs",
-    "pages/photosearch/photosearch",
+    "pages/photosearch/index/index",
+    "pages/photosearch/takephoto/takephoto",
     "pages/about/about",
     "pages/feedback/feedback",
-    "pages/history/history"
+    "pages/history/history",
+    "pages/photosearch/handle/handle"
   ],
   "window": {
     "backgroundTextStyle": "light",
