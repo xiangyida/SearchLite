@@ -1,10 +1,20 @@
 // pages/index.js
 Page({
-
+  navToTextSearch:function(){
+    wx.navigateTo({
+      url: '/pages/textsearch/textsearch',
+    })
+  },
+  navToPhotoSearch:function(){
+    wx.navigateTo({
+      url: '/pages/photosearch/photosearch',
+    })
+  },
   /**
    * 页面的初始数据
    */
   data: {
+
 
   },
 

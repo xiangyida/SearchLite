@@ -1,0 +1,22 @@
+<view class="page">
+   <view class="userinfo" >
+      <block>
+      <image  class="userinfo-avatar" src="/images/photo_1.png" mode="cover"></image>
+      <text class="userinfo-nickname">拍照搜题</text>
+    </block>
+  </view>
+  <view class="introduction">
+      <text class="userinfo-nickname">
+        说明：<br/>
+        小程序需要获取拍照权限<br/>
+        请使用横屏拍照<br/>
+        拍照完选区上传即可
+      </text>
+  </view>
+
+    <button class="button">
+       <text class="button_text">拍照</text>
+    </button>
+
+
+</view>

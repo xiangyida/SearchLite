@@ -1,4 +1,4 @@
-// tabbar/index.js
+// pages/photosearch/photosearch.js
 Page({
 
   /**
