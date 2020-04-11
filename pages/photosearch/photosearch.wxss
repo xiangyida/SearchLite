@@ -25,9 +25,6 @@
   text-align: center;
 }
 .button{
+  text-align: center;
   margin-top: 10em;
-  background-color:#23d713;
-}
-.button_text{
-  color: aliceblue;
 }

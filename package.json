@@ -9,6 +9,7 @@
   "author": "xiangyida",
   "license": "ISC",
   "dependencies": {
+    "@vant/weapp": "^1.2.0",
     "weui-miniprogram": "^0.2.2"
   }
 }

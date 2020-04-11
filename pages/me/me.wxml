@@ -1,13 +1,39 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<van-notice-bar mode="closeable" text="消息通知" />
+
+<view class="userinfo">
+	<button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+	<block wx:else>
+  		<image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+  		<text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </block>
+</view>
+
+<view class="searchInfo">
+<view>
+<van-row gutter="80">
+  <van-col span="8">
+    <van-circle value="70" color="#07c160" clockwise="true" text="前30%" layer-color="#eeeeee"/>
+  </van-col>
+  <van-col span="16">
+  <view style="margin-bottom: 1em">
+    <text class="userinfo-nickname">今日搜题数量：{{100}}</text>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view style="margin-bottom: 1em">
+    <text class="userinfo-nickname">总搜题数量：{{100}}</text>
   </view>
+  <view style="margin-bottom: 1em">
+    <text class="userinfo-nickname">今日排名：{{21}}</text>
+  </view>
+  </van-col>
+</van-row>
+</view>
+</view>
+
+<view> 
+	<van-grid column-num="3" gutter="{{ 10 }}">
+		<van-grid-item icon="label-o" text="历史" url="/pages/history/history" />
+		<van-grid-item icon="info-o" text="关于" url="/pages/about/about" />
+		<van-grid-item icon="comment-o" text="反馈" url="/pages/feedback/feedback" />
+	</van-grid>
 </view>

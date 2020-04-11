@@ -13,10 +13,9 @@
         拍照完选区上传即可
       </text>
   </view>
-
-    <button class="button">
-       <text class="button_text">拍照</text>
-    </button>
+  <view class="button">
+        <van-button type="primary" size="large">拍  照</van-button>
+  </view>
 
 
 </view>
