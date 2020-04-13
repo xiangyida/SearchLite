@@ -2,12 +2,12 @@
 Page({
   navToTextSearch:function(){
     wx.navigateTo({
-      url: '/pages/textsearch/textsearch',
+      url: '../textsearch/index/textsearch',
     })
   },
   navToPhotoSearch:function(){
     wx.navigateTo({
-      url: '/pages/photosearch/index/index',
+      url: '../photosearch/index/index',
     })
   },
   /**

@@ -1,15 +1,15 @@
 {
   "pages": [
     "pages/me/index/index",
-    "pages/index/index",
-    "pages/textsearch/index/textsearch",
+    "pages/search/index/index",
+    "pages/search/textsearch/index/textsearch",
     "pages/logs/logs",
-    "pages/photosearch/index/index",
-    "pages/photosearch/takephoto/takephoto",
+    "pages/search/photosearch/index/index",
+    "pages/search/photosearch/takephoto/takephoto",
     "pages/me/about/about",
     "pages/me/feedback/feedback",
     "pages/me/history/history",
-    "pages/photosearch/handle/handle"
+    "pages/search/photosearch/handle/handle"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -24,7 +24,7 @@
     "borderStyle": "black",
     "list": [
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/search/index/index",
         "iconPath": "/images/icon/search.png",
         "selectedIconPath": "/images/icon/search_1.png",
         "text": "搜题"

@@ -32,8 +32,8 @@
 
 <view> 
 	<van-grid column-num="3" gutter="{{ 10 }}">
-		<van-grid-item icon="label-o" text="历史" url="/pages/history/history" />
-		<van-grid-item icon="info-o" text="关于" url="/pages/about/about" />
-		<van-grid-item icon="comment-o" text="反馈" url="/pages/feedback/feedback" />
+		<van-grid-item icon="label-o" text="历史" url="../history/history" />
+		<van-grid-item icon="info-o" text="关于" url="../about/about" />
+		<van-grid-item icon="comment-o" text="反馈" url="../feedback/feedback" />
 	</van-grid>
 </view>
