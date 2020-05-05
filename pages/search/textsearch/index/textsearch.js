@@ -11,11 +11,25 @@ Page({
   search: function (value) {
       return new Promise((resolve, reject) => {
           setTimeout(() => {
-              resolve([{text: '搜索结果', value: 1}, {text: '搜索结果2', value: 2}])
+            let show = [];
+            wx.request({
+                url: 'http://127.0.0.1:8080/searchlite/problem/searchByString/'+value,
+                method: 'GET',
+                success: (res) => {
+                    let data = res.data.data;
+                    for(var i=0;i<data.length;i++){
+                       let obj = {text:data[i].title,value: data[i].id};
+                       show.push(obj)
+                    }
+                    resolve(show)
+                }
+              });
           }, 200)
       })
   },
   selectResult: function (e) {
-      console.log('select result', e.detail)
+      wx.navigateTo({
+        url: '../result/result',
+      })
   },
 });

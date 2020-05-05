@@ -1,16 +1,17 @@
 {
   "pages": [
+    "pages/search/textsearch/index/textsearch",
     "pages/analysis/index",
     "pages/me/index/index",
     "pages/search/index/index",
-    "pages/search/textsearch/index/textsearch",
     "pages/logs/logs",
     "pages/search/photosearch/index/index",
     "pages/search/photosearch/takephoto/takephoto",
     "pages/me/about/about",
     "pages/me/feedback/feedback",
     "pages/me/history/history",
-    "pages/search/photosearch/handle/handle"
+    "pages/search/photosearch/handle/handle",
+    "pages/search/textsearch/result/result"
   ],
   "window": {
     "backgroundTextStyle": "light",
