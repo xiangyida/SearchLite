@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/analysis/index",
     "pages/me/index/index",
     "pages/search/index/index",
     "pages/search/textsearch/index/textsearch",
@@ -28,6 +29,12 @@
         "iconPath": "/images/icon/search.png",
         "selectedIconPath": "/images/icon/search_1.png",
         "text": "搜题"
+      },
+      {
+        "pagePath": "pages/analysis/index",
+        "iconPath": "/images/icon/data.png",
+        "selectedIconPath": "/images/icon/data_1.png",
+        "text": "分析"
       },
       {
         "pagePath": "pages/me/index/index",
