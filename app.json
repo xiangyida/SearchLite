@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/search/textsearch/index/textsearch",
+    "pages/search/searchresult/result/searchresult",
     "pages/analysis/index",
     "pages/me/index/index",
     "pages/search/index/index",
@@ -11,7 +12,7 @@
     "pages/me/feedback/feedback",
     "pages/me/history/history",
     "pages/search/photosearch/handle/handle",
-    "pages/search/textsearch/result/result"
+    "pages/search/searchresult/target/target"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,0 +1,12 @@
+<view wx:for="{{show}}" wx:key="value">
+  <view class="problem">
+  <text>{{item.value.title}}</text>
+  <van-image 
+      width= "80%"
+      height= "200px"
+      fit="contain"
+      bindtap="navToTarget"
+   src="{{myurl}}{{item.value.problemPictureName}}" data-proname="{{item.value.problemPictureName}}" data-ansname="{{item.value.answerPictureName}}"/>
+   <van-divider />
+   </view>
+</view>
