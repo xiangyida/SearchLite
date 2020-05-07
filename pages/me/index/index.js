@@ -7,7 +7,11 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    todayTotal:'',
+    total:'',
+    todayRank:'',
+    rankPercentage:''
   },
   //事件处理函数
   bindViewTap: function() {
@@ -42,6 +46,18 @@ Page({
         }
       })
     }
+    wx.request({
+      url: 'http://127.0.0.1:8080/searchlite/user/personalSearchData/'+getApp().globalData.openId,
+      success: res=>{
+        this.setData({
+          todayTotal: res.data.data.todaySearchCount,
+          total: res.data.data.totalSearchCount,
+          todayRank: res.data.data.todayRank,
+          rankPercentage: res.data.data.rankPercentage
+        })
+      }
+    })
+
   },
   getUserInfo: function(e) {
     console.log(e)

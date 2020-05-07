@@ -1,2 +1,9 @@
-<!--pages/history/history.wxml-->
-<text>pages/history/history.wxml</text>
+<view class="history">
+<van-cell-group wx:for="{{history}}" >
+<van-cell title="{{item.title}}"  
+label="{{item.time}}" 
+link-type="navigateTo"
+url="/pages/search/searchresult/target/target?pro_name={{item.answerPictureName}}&ans_name={{item.answerPictureName}}"
+is-link/>
+</van-cell-group>
+</view>

@@ -13,17 +13,17 @@
 <view>
 <van-row gutter="80">
   <van-col span="8">
-    <van-circle value="70" color="#07c160" clockwise="true" text="前30%" layer-color="#eeeeee"/>
+    <van-circle value="{{100-rankPercentage}}" color="#07c160" clockwise="true" text="前{{rankPercentage}}%" layer-color="#eeeeee"/>
   </van-col>
   <van-col span="16">
   <view style="margin-bottom: 1em">
-    <text class="userinfo-nickname">今日搜题数量：{{100}}</text>
+    <text class="userinfo-nickname">今日搜题数量：{{todayTotal}}</text>
   </view>
   <view style="margin-bottom: 1em">
-    <text class="userinfo-nickname">总搜题数量：{{100}}</text>
+    <text class="userinfo-nickname">总搜题数量：{{total}}</text>
   </view>
   <view style="margin-bottom: 1em">
-    <text class="userinfo-nickname">今日排名：{{21}}</text>
+    <text class="userinfo-nickname">今日排名：{{todayRank}}</text>
   </view>
   </van-col>
 </van-row>

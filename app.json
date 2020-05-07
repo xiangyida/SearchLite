@@ -1,16 +1,16 @@
 {
   "pages": [
+    "pages/search/index/index",
+    "pages/me/index/index",
+    "pages/me/about/about",
+    "pages/me/history/history",
     "pages/search/textsearch/index/textsearch",
     "pages/search/searchresult/result/searchresult",
     "pages/analysis/index",
-    "pages/me/index/index",
-    "pages/search/index/index",
     "pages/logs/logs",
     "pages/search/photosearch/index/index",
     "pages/search/photosearch/takephoto/takephoto",
-    "pages/me/about/about",
     "pages/me/feedback/feedback",
-    "pages/me/history/history",
     "pages/search/photosearch/handle/handle",
     "pages/search/searchresult/target/target"
   ],

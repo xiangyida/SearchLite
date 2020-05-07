@@ -1,2 +1,13 @@
-<!--pages/about/about.wxml-->
-<text>pages/about/about.wxml</text>
+<view class="container">
+
+<van-button plain type="primary">搜题Lite</van-button>
+<text class="font">
+由@XiangYida开发
+功能如下：
+1.拍照搜题
+2.文本搜题
+3.实时搜题分析
+4.历史记录
+5.个人数据
+</text>
+</view>

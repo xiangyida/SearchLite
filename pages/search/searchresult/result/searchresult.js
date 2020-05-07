@@ -7,11 +7,12 @@ Page({
   onLoad: function(option){
     console.log(JSON.parse(option.data))
     this.setData({
-      show:JSON.parse(option.data)    })
+      show:JSON.parse(option.data)
+    })
   },
   navToTarget:function(e){
       wx.navigateTo({
-        url: '../target/target?pro_name='+e.currentTarget.dataset.proname+'&ans_name='+e.currentTarget.dataset.ansname,
+        url: '../target/target?pro_name='+e.currentTarget.dataset.proname+'&ans_name='+e.currentTarget.dataset.ansname+'&pro_id='+e.currentTarget.dataset.proid,
       })
   }
 })

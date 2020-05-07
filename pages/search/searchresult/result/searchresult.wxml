@@ -6,7 +6,7 @@
       height= "200px"
       fit="contain"
       bindtap="navToTarget"
-   src="{{myurl}}{{item.value.problemPictureName}}" data-proname="{{item.value.problemPictureName}}" data-ansname="{{item.value.answerPictureName}}"/>
+   src="{{myurl}}{{item.value.problemPictureName}}" data-proname="{{item.value.problemPictureName}}" data-ansname="{{item.value.answerPictureName}}" data-proid="{{item.value.id}}"/>
    <van-divider />
    </view>
 </view>
