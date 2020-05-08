@@ -15,7 +15,7 @@ onLoad: function(option){
   //历史记录页面，无需再次添加搜题历史
   if(this.data.proid != null){
     wx.request({
-      url: 'http://127.0.0.1:8080/searchlite/user/recordSearch?openId='+getApp().globalData.openId+'&problemId='+this.data.proid,
+      url: getApp().globalData.requestUrl+'/searchlite/user/recordSearch?openId='+getApp().globalData.openId+'&problemId='+this.data.proid,
     })
   }
   

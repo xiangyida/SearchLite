@@ -5,7 +5,7 @@ Page({
       myurl:'https://fuguangyu-1254071215.cos.ap-shanghai.myqcloud.com/problem/'
   },
   onLoad: function(option){
-    console.log(JSON.parse(option.data))
+    console.log(option.data)
     this.setData({
       show:JSON.parse(option.data)
     })

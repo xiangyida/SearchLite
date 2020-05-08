@@ -13,10 +13,11 @@ Page({
     message.others = this.data.others;
     console.log(message)
     wx.request({
-      url: 'http://127.0.0.1:8080/searchlite/user/feedback/',
+      url: getApp().globalData.requestUrl+'/searchlite/user/feedback/',
       method:'POST',
       data: message,
       success :res =>{
+        console.log(message)
         Dialog.alert({
           message: '提交成功，感谢您的反馈'
         }).then(() => {

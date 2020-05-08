@@ -31,7 +31,7 @@ Page({
       this.setOption_1(Chart_1);
     }
     wx.request({
-      url: 'http://127.0.0.1:8080/searchlite/analysis/wordCount',
+      url: getApp().globalData.requestUrl+'/searchlite/analysis/wordCount',
       method: 'GET',
       success: (res) => {
         let d = res.data
@@ -43,7 +43,7 @@ Page({
       }
     }),
     wx.request({
-      url: 'http://127.0.0.1:8080/searchlite/analysis/searchFrequency',
+      url: getApp().globalData.requestUrl+'/searchlite/analysis/searchFrequency',
       method: 'GET',
       success: (res) => {
         let d = res.data

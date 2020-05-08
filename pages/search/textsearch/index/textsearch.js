@@ -15,7 +15,7 @@ Page({
             let show = [];
             var that = this;
             wx.request({
-                url: 'http://127.0.0.1:8080/searchlite/problem/searchByString/'+value,
+                url: getApp().globalData.requestUrl+'/searchlite/problem/searchByString/'+value,
                 method: 'GET',
                 success: (res) => {
                     let data = res.data.data;

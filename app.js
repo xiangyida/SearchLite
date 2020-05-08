@@ -11,7 +11,7 @@ App({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
         wx.request({
-          url: 'http://127.0.0.1:8080/searchlite/user/login/'+res.code,
+          url: getApp().globalData.requestUrl+'/searchlite/user/login/'+res.code,
           success: r =>{
             getApp().globalData.openId = r.data.data.openId
           }
@@ -41,6 +41,8 @@ App({
   },
   globalData: {
     userInfo: null,
-    openId:''
-    }
+    openId:'',
+    requestUrl:'http://172.20.10.2:8080'
+    },
+    
 })

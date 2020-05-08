@@ -47,7 +47,7 @@ Page({
       })
     }
     wx.request({
-      url: 'http://127.0.0.1:8080/searchlite/user/personalSearchData/'+getApp().globalData.openId,
+      url: getApp().globalData.requestUrl+'/searchlite/user/personalSearchData/'+getApp().globalData.openId,
       success: res=>{
         this.setData({
           todayTotal: res.data.data.todaySearchCount,
