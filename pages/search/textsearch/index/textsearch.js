@@ -31,6 +31,7 @@ Page({
       })
   },
   selectResult: function (e) {
+      console.log(this.navdata)
       wx.navigateTo({
         url: '../../searchresult/result/searchresult?data='+JSON.stringify(this.navdata)
       })

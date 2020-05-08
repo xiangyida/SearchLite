@@ -1,17 +1,13 @@
-
 var app = getApp();
 // 获取显示区域长宽
 const device = wx.getSystemInfoSync()
 const W = device.windowWidth
 const H = device.windowHeight - 50
-
 let cropper = require('../welCropper/welCropper.js');
-
-
-
 Page({
   data: {
     hidden: true,
+    navdata:''
   },
   onLoad: function (e) {
     var that = this
@@ -20,15 +16,13 @@ Page({
     const tempFilePath = e.path;
     that.showCropper({
       src: tempFilePath,
-      
       sizeType: ['original'],   //'original'(default) | 'compressed'
       callback: (res) => {
         that.setData({
           hidden: false
         })
-        console.log(res)
         wx.uploadFile({
-          url: 'https://www.lxxcx.xyz/lixue/problem/searchByPicture', //仅为示例，非真实的接口地址
+          url: getApp().globalData.requestUrl+'/searchlite/problem/searchByPicture', 
           filePath: res,
           name: 'file',
           header: {
@@ -37,15 +31,20 @@ Page({
           formData: {
             method: 'POST'   //请求方式
           },
-          success: function (res) {
+          success: function (r) {
             that.setData({
               hidden: true
             })
-            var str = JSON.stringify(res.data)
-            console.log("sssss")
-            console.log(res.data)
+            var d= JSON.parse(r.data).data;
+            console.log(d.data)
+            let show = [];
+            for(var i=0;i<d.length;i++){
+              let obj = {text:d[i].title,value: d[i]};
+              show.push(obj)
+           }
+           that.navdata = show;
             wx.navigateTo({
-              url: '../search/search?str=' + res.data + "&flag=" + "3"
+              url: '/pages/search/searchresult/result/searchresult?data='+JSON.stringify(that.navdata)
             })
           }
         })
@@ -69,34 +68,34 @@ Page({
       success(res) {
         const tempFilePath = '../../pictures/logo.png'
         console.log(tempFilePath)
-
-        // 将选取图片传入cropper，并显示cropper
-        // mode=rectangle 返回图片path
-        // mode=quadrangle 返回4个点的坐标，并不返回图片。这个模式需要配合后台使用，用于perspective correction
-        // let modes = ["rectangle", "quadrangle"]
-        // let mode = modes[1]   //rectangle, quadrangle
         that.showCropper({
           src: tempFilePath,
           mode: mode,
           sizeType: ['original', 'compressed'],   //'original'(default) | 'compressed'
           callback: (res) => {
             wx.uploadFile({
-              url: 'https://www.lxxcx.xyz/lixue/problem/searchByPicture', //仅为示例，非真实的接口地址
+              url:  getApp().globalData.requestUrl+'/searchlite/problem/searchByPicture', 
               filePath: res,
               name: 'file',
               header: {
                 'content-type': 'application/json'
               },
-              success: function (res) {
-                console.log("上传文件的JSON")
-                console.log(res.data)
+              success: function (r) {
+                var d= JSON.parse(r.data).data;
+                console.log(d.data)
+                let show = [];
+                for(var i=0;i<d.length;i++){
+                  let obj = {text:d[i].title,value: d[i]};
+                  show.push(obj)
+                }
+                that.navdata = show;
                 wx.navigateTo({
-                  url: '../search/search?str=' + res.data + "&flag=" + "3"
+                  url: '/pages/search/searchresult/result/searchresult?data='+JSON.stringify(that.navdata)
                 })
-              }
+                }
             })
 
-            // that.hideCropper() //隐藏，我在项目里是点击完成就上传，所以如果回调是上传，那么隐藏掉就行了，不用previewImage
+            //that.hideCropper() //隐藏，我在项目里是点击完成就上传，所以如果回调是上传，那么隐藏掉就行了，不用previewImage
           }
         })
       }
