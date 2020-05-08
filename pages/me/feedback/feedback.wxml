@@ -6,8 +6,26 @@
 />
 </view>
 <van-cell-group>
-  <van-field value="问题：" required/>
-  <van-field value="联系方式："/>
-  <van-field value="备注："/>
+  <van-field
+    value="{{ problem }}"
+    required
+    clearable
+    label="问题"
+    placeholder="请输入您遇到的问题"
+  />
+    <van-field
+    value="{{ contact }}"
+    required
+    clearable
+    label="联系方式"
+    placeholder="请输入您的联系方式"
+  />
+    <van-field
+    value="{{ others }}"
+    clearable
+    label="备注"
+    placeholder="备注"
+  />
 </van-cell-group>
-<van-button class="feedback" type="primary">提交</van-button>
+<van-dialog id="van-dialog" />
+<van-button class="feedback" type="primary" bindtap="submit">提交</van-button>
