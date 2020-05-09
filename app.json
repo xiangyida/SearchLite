@@ -12,7 +12,8 @@
     "pages/search/photosearch/takephoto/takephoto",
     "pages/me/feedback/feedback",
     "pages/search/photosearch/handle/handle",
-    "pages/search/searchresult/target/target"
+    "pages/search/searchresult/target/target",
+    "pages/push/push"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -31,6 +32,12 @@
         "iconPath": "/images/icon/search.png",
         "selectedIconPath": "/images/icon/search_1.png",
         "text": "搜题"
+      },
+      {
+        "pagePath": "pages/push/push",
+        "iconPath": "/images/icon/push.png",
+        "selectedIconPath": "/images/icon/push_1.png",
+        "text": "推送"
       },
       {
         "pagePath": "pages/analysis/index",

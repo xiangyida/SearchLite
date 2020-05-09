@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<view class="page">
+<view class="container">
+  <view class="userinfo">
+    <block > 
+      <image bindtap="navToSearchResult" class="userinfo-avatar" src="/images/icon/push.png" mode="cover"></image>
+      <text class="userinfo-nickname">- 开启推送 -</text>
+    </block>
+  </view>
+</view>
+</view>

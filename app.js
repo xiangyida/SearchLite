@@ -42,7 +42,7 @@ App({
   globalData: {
     userInfo: null,
     openId:'',
-    requestUrl:'http://172.20.10.2:8080'
+    requestUrl:'http://192.168.0.9:8080'
     },
     
 })
