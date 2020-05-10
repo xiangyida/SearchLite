@@ -66,5 +66,8 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  onPullDownRefresh:function(){
+    this.onLoad()
   }
 })

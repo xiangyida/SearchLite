@@ -7,5 +7,6 @@
     "van-row": "@vant/weapp/row/index",
     "van-col": "@vant/weapp/col/index",
     "van-divider": "@vant/weapp/divider/index"
-  }
+  },
+  "enablePullDownRefresh": true
 }

@@ -7,7 +7,7 @@ Page({
   data: {
 
   },
-  navToSearchResult: () =>{
+  onLoad: () =>{
     let show = [];
     wx.request({
         url: getApp().globalData.requestUrl+'/searchlite/user/push/'+getApp().globalData.openId,
@@ -23,5 +23,8 @@ Page({
             })
         }
       });
-  }
+  },
+  onPullDownRefresh: function () {
+    this.onLoad()
+  },
 })

@@ -136,6 +136,9 @@ Page({
     }]
     }
     return option;
+  },
+  onPullDownRefresh: function(){
+    this.onLoad()
   }
 
 })
