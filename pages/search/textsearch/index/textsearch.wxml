@@ -2,7 +2,7 @@
    <view class="userinfo" >
       <block>
       <image  class="userinfo-avatar" src="/images/text_1.png" mode="cover"></image>
-      <text class="userinfo-nickname">拍照搜题</text>
+      <text class="userinfo-nickname">文本搜题</text>
     </block>
   </view>
     <view class="page__bd">
